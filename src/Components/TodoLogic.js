@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import InputToDo from './InputToDo';
 import ToDoList from './ToDoList';
 
 const TodoLogic = () => {
   const [todos, setTodos] = useState([
     {
-      id: 1,
+      id: uuidv4(),
       title: 'ToDo List',
       completed: false,
     },
     {
-      id: 2,
+      id: uuidv4(),
       title: 'Imran',
       completed: true,
     },
@@ -26,10 +27,29 @@ const TodoLogic = () => {
       return todo;
     }));
   };
+  const delTodo = (id) => {
+    setTodos([
+      ...todos.filter((todo) => todo.id !== id),
+    ]);
+  };
+  const addTodoItem = (title) => {
+    const newTodo = {
+      id: uuidv4(),
+      title,
+      completed: false,
+    };
+    setTodos([...todos, newTodo]);
+  };
   return (
     <div>
-      <InputToDo />
-      <ToDoList todosProps={todos} handleChange={handleChange} />
+      <InputToDo
+        addTodoItem={addTodoItem}
+      />
+      <ToDoList
+        todosProps={todos}
+        handleChange={handleChange}
+        delTodo={delTodo}
+      />
     </div>
   );
 };
