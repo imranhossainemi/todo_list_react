@@ -2,10 +2,15 @@
 import React from 'react';
 import ToDoItem from './ToDoItem';
 
-const ToDoList = ({ todosProps, handleChange }) => (
+const ToDoList = ({ todosProps, handleChange, delTodo }) => (
   <ul>
     {todosProps.map((todo) => (
-      <ToDoItem key={todo.id} itemProp={todo} handleChange={handleChange} />
+      <ToDoItem
+        key={todo.id}
+        itemProp={todo}
+        handleChange={handleChange}
+        delTodo={delTodo}
+      />
     ))}
   </ul>
 );
