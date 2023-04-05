@@ -30,9 +30,8 @@ const InputToDo = ({ addTodoItem }) => {
           onChange={handleChange}
         />
         <button type="submit" className="btnSubmit">ADD</button>
+        <h2 className="msg">{message}</h2>
       </form>
-      <h2>{message}</h2>
-
     </>
   );
 };
