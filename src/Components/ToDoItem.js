@@ -2,19 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ToDoItem = ({ itemProp, handleChange, delTodo }) => (
-  <li>
-    <>
-      <input
-        type="checkbox"
-        checked={itemProp.completed}
-        onChange={() => handleChange(itemProp.id)}
-      />
-      <button onClick={() => delTodo(itemProp.id)} type="button">
-        Delete
-      </button>
-
-    </>
+  <li className="listItem">
+    <input
+      type="checkbox"
+      checked={itemProp.completed}
+      onChange={() => handleChange(itemProp.id)}
+      className="taskCmp"
+    />
     {itemProp.title}
+    <button onClick={() => delTodo(itemProp.id)} type="button" className="taskDel">
+      Delete
+    </button>
   </li>
 );
 
