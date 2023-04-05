@@ -3,7 +3,7 @@ import React from 'react';
 import ToDoItem from './ToDoItem';
 
 const ToDoList = ({ todosProps, handleChange, delTodo }) => (
-  <ul>
+  <ul className="list">
     {todosProps.map((todo) => (
       <ToDoItem
         key={todo.id}
