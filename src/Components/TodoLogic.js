@@ -41,6 +41,17 @@ const TodoLogic = () => {
     };
     setTodos([...todos, newTodo]);
   };
+  const setUpdate = (updateTitle, id) => {
+    setTodos(
+      todos.map((todo) => {
+        if (todo.id === id) {
+          const v = todo;
+          v.title = updateTitle;
+        }
+        return todo;
+      }),
+    );
+  };
   return (
     <div className="toDo">
       <Header />
@@ -51,6 +62,7 @@ const TodoLogic = () => {
         todosProps={todos}
         handleChange={handleChange}
         delTodo={delTodo}
+        setUpdate={setUpdate}
       />
     </div>
   );
