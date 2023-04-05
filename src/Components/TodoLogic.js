@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import InputToDo from './InputToDo';
 import ToDoList from './ToDoList';
+import Header from './Header';
 
 const TodoLogic = () => {
   const [todos, setTodos] = useState([
@@ -41,7 +42,8 @@ const TodoLogic = () => {
     setTodos([...todos, newTodo]);
   };
   return (
-    <div>
+    <div className="toDo">
+      <Header />
       <InputToDo
         addTodoItem={addTodoItem}
       />
