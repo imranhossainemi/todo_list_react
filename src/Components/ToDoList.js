@@ -2,7 +2,9 @@
 import React from 'react';
 import ToDoItem from './ToDoItem';
 
-const ToDoList = ({ todosProps, handleChange, delTodo }) => (
+const ToDoList = ({
+  todosProps, handleChange, delTodo, setUpdate,
+}) => (
   <ul className="list">
     {todosProps.map((todo) => (
       <ToDoItem
@@ -10,6 +12,7 @@ const ToDoList = ({ todosProps, handleChange, delTodo }) => (
         itemProp={todo}
         handleChange={handleChange}
         delTodo={delTodo}
+        setUpdate={setUpdate}
       />
     ))}
   </ul>
