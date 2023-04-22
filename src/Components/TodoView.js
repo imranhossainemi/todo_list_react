@@ -1,7 +1,10 @@
 import React from 'react';
+import TodoLogic from './TodoLogic';
 
 const TodoView = () => (
-  <div />
+  <main>
+    <TodoLogic />
+  </main>
 );
 
 export default TodoView;

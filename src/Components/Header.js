@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Header = () => (
-  <header>
+  <div className="toDoHeader">
     <h1>ToDo List</h1>
     <p>with React</p>
-  </header>
+  </div>
 );
 
 export default Header;
