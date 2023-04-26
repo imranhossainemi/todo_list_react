@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 const InputToDo = ({ addTodoItem }) => {
   const [title, setTitle] = useState('');
@@ -34,6 +34,10 @@ const InputToDo = ({ addTodoItem }) => {
       </form>
     </>
   );
+};
+
+InputToDo.propTypes = {
+  addTodoItem: PropTypes.string.isRequired,
 };
 
 export default InputToDo;

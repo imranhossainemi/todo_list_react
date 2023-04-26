@@ -64,7 +64,7 @@ const ToDoItem = ({
 };
 
 ToDoItem.propTypes = {
-  itemProp: PropTypes.string.isRequired,
+  itemProp: PropTypes.objectOf.isRequired,
   handleChange: PropTypes.string.isRequired,
   delTodo: PropTypes.string.isRequired,
 };

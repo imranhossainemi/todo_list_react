@@ -31,7 +31,7 @@ const Form = () => {
   const carBrands = ['Mercedes', 'BMW', 'Maserati', 'Audi', 'Toyata'];
 
   const carBrandOptions = carBrands.map((carBrand, key) => (
-    <option value={carBrand} key={key.id}>
+    <option value={carBrand} key={key.index}>
       {carBrand}
     </option>
   ));
