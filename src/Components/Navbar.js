@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useRef } from 'react';
+import useOnClickOutside from '../useOnClickOutside';
 
 const Navbar = () => {
   const [dropdown, setDropdown] = useState(false);
-  useEffect(() => {
-    document.title = `Current state value: ${dropdown}`;
-  }, [dropdown]);
+  const ref = useRef();
+  useOnClickOutside(ref, dropdown, () => setDropdown(false));
   return (
     <nav>
       <ul>
         <li>Home</li>
         <li>About</li>
-        <li>
+        <li ref={ref}>
           <button type="button" onClick={() => setDropdown((prev) => !prev)}>
             Services
-            {' '}
             <span> &#8595; </span>
           </button>
           {dropdown && (
