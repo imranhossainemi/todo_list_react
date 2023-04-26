@@ -1,4 +1,5 @@
 import { React, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 const Form = () => {
   const [state, setState] = useState({
@@ -30,8 +31,8 @@ const Form = () => {
 
   const carBrands = ['Mercedes', 'BMW', 'Maserati', 'Audi', 'Toyata'];
 
-  const carBrandOptions = carBrands.map((carBrand, key) => (
-    <option value={carBrand} key={key.index}>
+  const carBrandOptions = carBrands.map((carBrand) => (
+    <option value={carBrand} key={uuidv4()}>
       {carBrand}
     </option>
   ));

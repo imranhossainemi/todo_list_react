@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 const InputToDo = ({ addTodoItem }) => {
   const [title, setTitle] = useState('');
   const [message, setMessage] = useState('');
-
   const handleChange = (e) => {
     setTitle(e.target.value);
   };
@@ -37,7 +36,7 @@ const InputToDo = ({ addTodoItem }) => {
 };
 
 InputToDo.propTypes = {
-  addTodoItem: PropTypes.string.isRequired,
+  addTodoItem: PropTypes.func.isRequired,
 };
 
 export default InputToDo;
