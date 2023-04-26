@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import styles from '../styles/ToDoItem.module.css';
 
 const ToDoItem = ({
   itemProp, handleChange, delTodo, setUpdate,
@@ -30,8 +31,8 @@ const ToDoItem = ({
     }
   };
   return (
-    <li className="listItem">
-      <div className="listContent" style={viewMode}>
+    <li className={styles.item}>
+      <div className={styles.content} style={viewMode}>
         <input
           type="checkbox"
           checked={itemProp.completed}
