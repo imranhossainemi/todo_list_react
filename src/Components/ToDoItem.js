@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from '../styles/ToDoItem.module.css';
@@ -64,9 +63,10 @@ const ToDoItem = ({
 };
 
 ToDoItem.propTypes = {
-  itemProp: PropTypes.objectOf.isRequired,
-  handleChange: PropTypes.string.isRequired,
-  delTodo: PropTypes.string.isRequired,
+  itemProp: PropTypes.shape().isRequired,
+  handleChange: PropTypes.func.isRequired,
+  delTodo: PropTypes.func.isRequired,
+  setUpdate: PropTypes.func.isRequired,
 };
 
 export default ToDoItem;
