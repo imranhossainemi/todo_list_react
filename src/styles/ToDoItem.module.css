@@ -1,0 +1,23 @@
+.item {
+  font-size: 1rem;
+  list-style-type: none;
+  padding: 14px 25px;
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+  background: hsl(0, 3%, 94%);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content button {
+  cursor: pointer;
+  background: transparent;
+  margin-left: 7px;
+  padding: 10px;
+}
